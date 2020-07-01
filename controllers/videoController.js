@@ -18,8 +18,18 @@ export const search = (req, res) => {
     res.render("search", { pageTitle: "Search", searchingBy, videos });
 };
 
-export const videoDetail = (req, res) => 
-res.render("videoDetail", { pageTitle: "Video Detail" });
+export const videoDetail = async(req, res) => {
+    const {
+        params: {id}
+    } = req;
+    try{
+        const video = await Video.findById(id);
+        console.log(video);
+        res.render("videoDetail", { pageTitle: "Video Detail", video: video });
+    } catch (error) {
+        res.redirect(routes.home);
+    }
+}
 
 export const editVideo = (req, res) => 
 res.render("editVideo", { pageTitle: "Edit Video" });
