@@ -12,25 +12,37 @@ body {
 
 main {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 70vh;
 }
 
 button,
-input {
+input:not([type="file"]),
+textarea,
+.fileUpload {
+  border: none;
   padding: 7px 10px;
   width: 100%;
   border-radius: 5px;
   font-size: 14px;
   color: $black;
   font-weight: 600;
+  resize: none;
+  background-color: white;
   &::placeholder {
     font-weight: 300;
     color: rgba($color: #000000, $alpha: 0.7);
   }
 }
+
+input[type="submit"],
 button {
-  border-width: 1px;
-  border-color: $grey;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #3498db;
+}
+button.delete {
+  background-color: $dark-red;
 }
