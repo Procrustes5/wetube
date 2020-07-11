@@ -9,6 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    a {
+      text-decoration: none;
+      display: inline;
+      color: white;
+    }
     span {
       margin-right: 10px;
       font-size: 20px;
