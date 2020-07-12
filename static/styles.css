@@ -391,6 +391,10 @@ input[type="submit"] {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .social-login button a {
+      text-decoration: none;
+      display: inline;
+      color: white; }
     .social-login button span {
       margin-right: 10px;
       font-size: 20px; }
