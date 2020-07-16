@@ -141,7 +141,9 @@ export const getChangePassword = (req, res) =>
   res.render("changePassword", { pageTitle: "Change Password" });
 
 export const postChangePassword = async (req, res) => {
-  const { oldPassword, newPassword, newPassword1 } = req;
+  const {
+    body: { oldPassword, newPassword, newPassword1 },
+  } = req;
   try {
     if (newPassword !== newPassword1) {
       res.status(400);
