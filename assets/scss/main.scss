@@ -38,6 +38,7 @@ textarea,
 
 input[type="submit"],
 button {
+  max-width: 320px;
   cursor: pointer;
   border: none;
   color: white;
