@@ -85,7 +85,7 @@ export const naverLoginCallback = async (_, __, profile, cb) => {
     const newUser = await User.create({
       email,
       name,
-      githubId: id,
+      naverId: id,
       avatarUrl,
     });
     return cb(null, newUser);
