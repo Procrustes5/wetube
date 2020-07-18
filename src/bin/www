@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import app from "./app";
 import "./db";
+import http from "http";
 
 dotenv.config();
 
@@ -8,9 +9,6 @@ import "./models/Video";
 import "./models/Comment";
 import "./models/User";
 
-const PORT = process.env.PORT || 4000;
+const PORT = normalizePort(process.env.PORT_SER || 8080);
 
-const handleListening = () =>
-  console.log(`♬ Listening on: http://localhost:${PORT}`);
-
-app.listen(PORT, handleListening);
+app.set('port', PORT);

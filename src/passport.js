@@ -17,7 +17,7 @@ passport.use(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      callbackURL: `http://localhost:4000${routes.githubCallback}`,
+      callbackURL: `http://studiosundial.com${routes.githubCallback}`,
     },
     githubLoginCallback
   )
@@ -28,7 +28,7 @@ passport.use(
     {
       clientID: process.env.NV_ID,
       clientSecret: process.env.NV_SECRET,
-      callbackURL: `http://localhost:4000${routes.naverCallback}`,
+      callbackURL: `http://studiosundial.com${routes.naverCallback}`,
     },
     naverLoginCallback
   )
